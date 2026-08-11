@@ -1,0 +1,22 @@
+[project]
+name = "ocr_pipeline"
+version = "0.1.0"
+description = "A lightweight OCR pipeline for images and multi-page PDFs."
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["ocr", "pdf", "image", "pipeline"]
+license = { text = "MIT" }
+authors = [
+  { name = "OCR Pipeline Team", email = "info@example.com" }
+]
+dependencies = [
+  "Pillow>=10.0.0",
+  "PyMuPDF>=1.22.0",
+  "requests>=2.31.0"
+]
+[project.scripts]
+ocr-pipeline = "ocr_pipeline.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
